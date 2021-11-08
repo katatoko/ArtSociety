@@ -2,6 +2,11 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,macos
 
 ### macOS ###
+
+### Firebase Key ###
+
+artsociety-8b2b9-88e9f2433cbf.json
+
 # General
 .DS_Store
 .AppleDouble
