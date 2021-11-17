@@ -1,14 +1,21 @@
 {
-  "name": "backend-artsociety",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Miguel Martinez",
-  "license": "ISC",
-  "dependencies": {
-    "firebase-admin": "^10.0.0"
-  }
+    "name": "backend-artsociety",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js",
+        "start": "node index.js"
+    },
+    "author": "Miguel Martinez",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.24.0",
+        "express": "^4.17.1",
+        "firebase-admin": "^10.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
 }
