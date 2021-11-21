@@ -1,21 +1,5 @@
 const db = require('./firebase.js');
 
-function getUsers(callback) {
-    return db.collection('Users').get()
-        .then((refDoc) => {
-            var arrayUsers = [];
-            refDoc.forEach((doc) => {
-                arrayUsers.push(doc.data());
-                //console.log(doc.id, '=>', doc.data());
-            })
-            callback(arrayUsers);
-        })
-        .catch(err => {
-            //console.error(`Error to get Users ${err}`);
-            callback(`Error to get Users ${err}`);
-
-        })
-}
 
 function getUser(uid, callback) {
     return db.collection('Users').doc(uid).get()
@@ -60,7 +44,7 @@ function updateUsersPartial(uid, User, callback) {
 function deleteUsers(uid, callback) {
     return db.collection('Users').doc(uid).delete()
         .then(() => {
-            callback("Success");
+            callback("delete");
         })
         .catch((err) => {
             callback(`Error to delete Users ${err}`);
@@ -68,7 +52,6 @@ function deleteUsers(uid, callback) {
 }
 
 module.exports = {
-    getUsers,
     getUser,
     addUsers,
     updateUsersPartial,

@@ -3,12 +3,6 @@ const dbU = require('../src/db/crudUsers.js');
 const router = express.Router();
 
 
-router.get('/', function(req, res) {
-    dbU.getUsers(function(arrayUsers) {
-        res.send(arrayUsers);
-    })
-})
-
 router.get('/:id', function(req, res) {
     const uid = req.params.id;
     dbU.getUser(uid, function(User) {
@@ -18,7 +12,7 @@ router.get('/:id', function(req, res) {
 
 router.post('/', (req, res) => {
     const User = req.body;
-    dbU.addUser(User, function(response) {
+    dbU.addUsers(User, function(response) {
         res.send(response);
     })
 })
@@ -26,7 +20,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     const uid = req.params.id;
     const User = req.body;
-    dbU.updateUserTotally(uid, User, function(response) {
+    dbU.updateUsersTotally(uid, User, function(response) {
         res.send(response)
     })
 })
@@ -34,14 +28,14 @@ router.put('/:id', (req, res) => {
 router.patch('/:id', (req, res) => {
     const uid = req.params.id;
     const User = req.body;
-    dbU.updateUserPartial(uid, User, function(response) {
+    dbU.updateUsersPartial(uid, User, function(response) {
         res.send(response)
     })
 })
 
 router.delete('/:id', (req, res) => {
     const uid = req.params.id;
-    dbU.deleteUser(uid, function(response) {
+    dbU.deleteUsers(uid, function(response) {
         res.send(response);
     })
 })

@@ -1,12 +1,34 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,windows,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,macos
+# Created by https://www.toptal.com/developers/gitignore/api/firebase,node,windows,macos,linux,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=firebase,node,windows,macos,linux,react
 
-### macOS ###
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
 
 ### Firebase Key ###
-
 artsociety-8b2b9-88e9f2433cbf.json
 
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### macOS ###
 # General
 .DS_Store
 .AppleDouble
@@ -165,6 +187,19 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+### react ###
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -191,4 +226,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,windows,macos
+# End of https://www.toptal.com/developers/gitignore/api/firebase,node,windows,macos,linux,react
